@@ -25,7 +25,7 @@ apt-get update && apt-get install -y --no-install-recommends \
                           help2man \
                           libncurses-dev \
                           libssl-dev \
-                          libtool-bin \
+                          libtool \
                           make \
                           patch \
                           pkg-config \
