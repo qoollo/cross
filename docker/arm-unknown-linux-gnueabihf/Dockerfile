@@ -9,6 +9,7 @@ RUN apt-get update && \
     make \
     curl \
     gperf \
+    bison \
     pkg-config
 
 COPY crosstool-ng.sh /
