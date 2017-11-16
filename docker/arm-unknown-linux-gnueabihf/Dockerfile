@@ -3,8 +3,8 @@ FROM ubuntu:14.04
 COPY cross-apt-packages.sh /
 RUN sh /cross-apt-packages.sh
 
-COPY rustbuild-setup.sh /
-RUN sh /rustbuild-setup.sh
+COPY rustbuild.sh /
+RUN sh /rustbuild.sh
 USER rustbuild
 
 COPY crosstool-ng.sh /
