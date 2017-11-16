@@ -7,9 +7,21 @@ RUN apt-get update && \
     gcc \
     libc6-dev \
     make \
-    curl \
-    gperf \
     bison \
+    build-essential \
+    autoconf \
+    automake \
+    libtool \
+    flex \
+    bison \
+    libncurses5-dev \
+    gettext \
+    texinfo \
+    gperf \
+    gawk \
+    curl \
+    cvs \
+    subversion \
     pkg-config
 
 COPY crosstool-ng.sh /
