@@ -7,7 +7,7 @@ COPY crosstool-ng.sh /
 RUN bash /crosstool-ng.sh
 
 COPY arm-unknown-linux-gnueabihf/arm-linux-gnueabihf.config /
-COPY build-toolchains.sh /
+COPY arm-unknown-linux-gnueabihf/build-toolchains.sh /
 RUN sh /build-toolchains.sh
 
 ENV PATH=$PATH:/x-tools/arm-unknown-linux-gnueabihf/bin
