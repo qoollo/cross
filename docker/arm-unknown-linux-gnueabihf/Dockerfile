@@ -22,6 +22,7 @@ RUN apt-get update && \
     curl \
     cvs \
     subversion \
+    wget \
     pkg-config
 
 COPY crosstool-ng.sh /
