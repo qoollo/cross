@@ -6,7 +6,7 @@ RUN sh /cross-apt-packages.sh
 COPY crosstool-ng.sh /
 RUN bash /crosstool-ng.sh
 
-COPY arm-linux-gnueabihf.config /
+COPY arm-unknown-linux-gnueabihf/arm-linux-gnueabihf.config /
 COPY build-toolchains.sh /
 RUN sh /build-toolchains.sh
 
