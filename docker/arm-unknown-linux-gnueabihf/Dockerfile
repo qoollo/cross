@@ -19,6 +19,9 @@ RUN sh ./build-toolchains.sh
 USER root
 
 ENV PATH=$PATH:/x-tools/arm-unknown-linux-gnueabihf/bin
+RUN ls /x-tools
+RUN ls /x-tools/arm-unknown-linux-gnueabihf
+RUN ls /x-tools/arm-unknown-linux-gnueabihf/bin
 
 COPY xargo.sh /
 RUN bash /xargo.sh
