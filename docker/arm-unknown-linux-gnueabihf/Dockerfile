@@ -8,7 +8,10 @@ RUN bash /crosstool-ng.sh
 
 COPY arm-unknown-linux-gnueabihf/arm-linux-gnueabihf.config /
 COPY arm-unknown-linux-gnueabihf/build-toolchains.sh /
+
+USER rustbuild
 RUN sh /build-toolchains.sh
+USER root
 
 ENV PATH=$PATH:/x-tools/arm-unknown-linux-gnueabihf/bin
 
