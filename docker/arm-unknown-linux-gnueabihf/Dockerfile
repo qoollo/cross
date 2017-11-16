@@ -3,14 +3,18 @@ FROM ubuntu:14.04
 COPY cross-apt-packages.sh /
 RUN sh /cross-apt-packages.sh
 
+COPY rustbuild-setup.sh /
+RUN sh /rustbuild-setup.sh
+USER rustbuild
+
 COPY crosstool-ng.sh /
-RUN bash /crosstool-ng.sh
+RUN sh /crosstool-ng.sh
 
 COPY arm-unknown-linux-gnueabihf/arm-linux-gnueabihf.config /
 COPY arm-unknown-linux-gnueabihf/build-toolchains.sh /
 
-USER rustbuild
 RUN sh /build-toolchains.sh
+
 USER root
 
 ENV PATH=$PATH:/x-tools/arm-unknown-linux-gnueabihf/bin
