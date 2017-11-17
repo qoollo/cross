@@ -28,7 +28,7 @@ RUN bash /xargo.sh
 
 COPY openssl.sh qemu.sh /
 
-RUN bash /openssl.sh linux-armv4 arm-linux-gnueabihf- && \
+RUN bash /openssl.sh linux-armv4 arm-unknown-linux-gnueabihf- && \
     bash /qemu.sh arm
 
 ENV CARGO_TARGET_ARM_UNKNOWN_LINUX_GNUEABIHF_LINKER=arm-linux-gnueabihf-gcc \
