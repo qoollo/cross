@@ -7,64 +7,65 @@ sudo: required
 matrix:
   include:
     # Linux
-    - env: TARGET=aarch64-unknown-linux-gnu       CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
-    - env: TARGET=arm-unknown-linux-gnueabi       CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
-    - env: TARGET=arm-unknown-linux-musleabi                    STD=1                RUN=1
-    - env: TARGET=armv7-unknown-linux-gnueabihf   CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
-    - env: TARGET=armv7-unknown-linux-musleabihf                STD=1                RUN=1
-    - env: TARGET=i686-unknown-linux-gnu          CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
-    - env: TARGET=i686-unknown-linux-musl                       STD=1 OPENSSL=0.5.5  RUN=1
-    - env: TARGET=mips-unknown-linux-gnu          CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
-    - env: TARGET=mips64-unknown-linux-gnuabi64   CPP=1 DYLIB=1 STD=1 OPENSSL=0.7.17 RUN=1
-    - env: TARGET=mips64el-unknown-linux-gnuabi64 CPP=1 DYLIB=1 STD=1 OPENSSL=0.7.17 RUN=1
-    - env: TARGET=mipsel-unknown-linux-gnu        CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
-    - env: TARGET=powerpc-unknown-linux-gnu       CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
-    - env: TARGET=powerpc64-unknown-linux-gnu     CPP=1 DYLIB=1 STD=1 OPENSSL=0.7.17 RUN=1
-    - env: TARGET=powerpc64le-unknown-linux-gnu   CPP=1 DYLIB=1 STD=1 OPENSSL=0.7.17 RUN=1
-    - env: TARGET=s390x-unknown-linux-gnu         CPP=1 DYLIB=1 STD=1 OPENSSL=0.7.17
-    - env: TARGET=sparc64-unknown-linux-gnu       CPP=1 DYLIB=1       OPENSSL=0.5.5  RUN=1
-    - env: TARGET=x86_64-unknown-linux-gnu        CPP=1 DYLIB=1       OPENSSL=0.5.5  RUN=1 DEPLOY=1
-    - env: TARGET=x86_64-unknown-linux-musl                     STD=1 OPENSSL=0.5.5  RUN=1 DEPLOY=1
+#    - env: TARGET=aarch64-unknown-linux-gnu       CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=arm-unknown-linux-gnueabi       CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
+    - env: TARGET=arm-unknown-linux-gnueabihf     CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=arm-unknown-linux-musleabi                    STD=1                RUN=1
+#    - env: TARGET=armv7-unknown-linux-gnueabihf   CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=armv7-unknown-linux-musleabihf                STD=1                RUN=1
+#    - env: TARGET=i686-unknown-linux-gnu          CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=i686-unknown-linux-musl                       STD=1 OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=mips-unknown-linux-gnu          CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=mips64-unknown-linux-gnuabi64   CPP=1 DYLIB=1 STD=1 OPENSSL=0.7.17 RUN=1
+#    - env: TARGET=mips64el-unknown-linux-gnuabi64 CPP=1 DYLIB=1 STD=1 OPENSSL=0.7.17 RUN=1
+#    - env: TARGET=mipsel-unknown-linux-gnu        CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=powerpc-unknown-linux-gnu       CPP=1 DYLIB=1 STD=1 OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=powerpc64-unknown-linux-gnu     CPP=1 DYLIB=1 STD=1 OPENSSL=0.7.17 RUN=1
+#    - env: TARGET=powerpc64le-unknown-linux-gnu   CPP=1 DYLIB=1 STD=1 OPENSSL=0.7.17 RUN=1
+#    - env: TARGET=s390x-unknown-linux-gnu         CPP=1 DYLIB=1 STD=1 OPENSSL=0.7.17
+#    - env: TARGET=sparc64-unknown-linux-gnu       CPP=1 DYLIB=1       OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=x86_64-unknown-linux-gnu        CPP=1 DYLIB=1       OPENSSL=0.5.5  RUN=1 DEPLOY=1
+#    - env: TARGET=x86_64-unknown-linux-musl                     STD=1 OPENSSL=0.5.5  RUN=1 DEPLOY=1
 
     # Android
-    - env: TARGET=aarch64-linux-android           CPP=1         STD=1 OPENSSL=0.5.5  RUN=1
-    - env: TARGET=arm-linux-androideabi           CPP=1         STD=1 OPENSSL=0.5.5  RUN=1
-    - env: TARGET=armv7-linux-androideabi         CPP=1         STD=1 OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=aarch64-linux-android           CPP=1         STD=1 OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=arm-linux-androideabi           CPP=1         STD=1 OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=armv7-linux-androideabi         CPP=1         STD=1 OPENSSL=0.5.5  RUN=1
     # NOTE RUN=1 missing due to issue #143
-    - env: TARGET=i686-linux-android              CPP=1         STD=1 OPENSSL=0.5.5
-    - env: TARGET=x86_64-linux-android            CPP=1         STD=1 OPENSSL=0.5.5  RUN=1
+#    - env: TARGET=i686-linux-android              CPP=1         STD=1 OPENSSL=0.5.5
+#    - env: TARGET=x86_64-linux-android            CPP=1         STD=1 OPENSSL=0.5.5  RUN=1
 
     # OSX
-    - env: TARGET=i686-apple-darwin                     DYLIB=1 STD=1                RUN=1
-      os: osx
-    - env: TARGET=x86_64-apple-darwin                   DYLIB=1 STD=1                RUN=1 DEPLOY=1
-      os: osx
+#    - env: TARGET=i686-apple-darwin                     DYLIB=1 STD=1                RUN=1
+#      os: osx
+#    - env: TARGET=x86_64-apple-darwin                   DYLIB=1 STD=1                RUN=1 DEPLOY=1
+#      os: osx
 
     # BSD
-    - env: TARGET=i686-unknown-freebsd                  DYLIB=1 STD=1 OPENSSL=0.7.17
-    - env: TARGET=x86_64-unknown-dragonfly              DYLIB=1       OPENSSL=0.5.5
-    - env: TARGET=x86_64-unknown-freebsd                DYLIB=1 STD=1 OPENSSL=0.5.5
-    - env: TARGET=x86_64-unknown-netbsd                 DYLIB=1 STD=1 OPENSSL=0.7.17
+#    - env: TARGET=i686-unknown-freebsd                  DYLIB=1 STD=1 OPENSSL=0.7.17
+#    - env: TARGET=x86_64-unknown-dragonfly              DYLIB=1       OPENSSL=0.5.5
+#    - env: TARGET=x86_64-unknown-freebsd                DYLIB=1 STD=1 OPENSSL=0.5.5
+#    - env: TARGET=x86_64-unknown-netbsd                 DYLIB=1 STD=1 OPENSSL=0.7.17
 
     # Solaris
-    - env: TARGET=sparcv9-sun-solaris                   DYLIB=1 STD=1 OPENSSL=0.7.17
-    - env: TARGET=x86_64-sun-solaris                    DYLIB=1 STD=1 OPENSSL=0.7.17
+#    - env: TARGET=sparcv9-sun-solaris                   DYLIB=1 STD=1 OPENSSL=0.7.17
+#    - env: TARGET=x86_64-sun-solaris                    DYLIB=1 STD=1 OPENSSL=0.7.17
 
     # Windows
-    - env: TARGET=x86_64-pc-windows-gnu           CPP=1         STD=1                RUN=1
-    - env: TARGET=i686-pc-windows-gnu             CPP=1         STD=1                RUN=1
+#    - env: TARGET=x86_64-pc-windows-gnu           CPP=1         STD=1                RUN=1
+#    - env: TARGET=i686-pc-windows-gnu             CPP=1         STD=1                RUN=1
 
     # Emscripten
-    - env: TARGET=asmjs-unknown-emscripten        CPP=1         STD=1                RUN=1
-    - env: TARGET=wasm32-unknown-emscripten       CPP=1         STD=1                RUN=1
+#    - env: TARGET=asmjs-unknown-emscripten        CPP=1         STD=1                RUN=1
+#    - env: TARGET=wasm32-unknown-emscripten       CPP=1         STD=1                RUN=1
       # work around rust-lang/cargo#4689
-      rust: nightly-2017-10-24
+#      rust: nightly-2017-10-24
 
     # Bare metal
-    - env: TARGET=thumbv6m-none-eabi                                                 RUN=1
-    - env: TARGET=thumbv7em-none-eabi                                                RUN=1
-    - env: TARGET=thumbv7em-none-eabihf                                              RUN=1
-    - env: TARGET=thumbv7m-none-eabi                                                 RUN=1
+#    - env: TARGET=thumbv6m-none-eabi                                                 RUN=1
+#    - env: TARGET=thumbv7em-none-eabi                                                RUN=1
+#    - env: TARGET=thumbv7em-none-eabihf                                              RUN=1
+#    - env: TARGET=thumbv7m-none-eabi                                                 RUN=1
 
 install:
   - curl https://sh.rustup.rs -sSf |

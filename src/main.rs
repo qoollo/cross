@@ -95,6 +95,7 @@ pub enum Target {
     // Linux
     Aarch64UnknownLinuxGnu,
     ArmUnknownLinuxGnueabi,
+    ArmUnknownLinuxGnueabihf,
     ArmUnknownLinuxMusleabi,
     Armv7UnknownLinuxGnueabihf,
     Armv7UnknownLinuxMusleabihf,
@@ -196,6 +197,7 @@ impl Target {
         match *self {
             Target::Aarch64UnknownLinuxGnu |
             Target::ArmUnknownLinuxGnueabi |
+            Target::ArmUnknownLinuxGnueabihf |
             Target::ArmUnknownLinuxMusleabi |
             Target::Armv7UnknownLinuxGnueabihf |
             Target::Armv7UnknownLinuxMusleabihf |
@@ -257,6 +259,7 @@ impl Target {
             Aarch64UnknownLinuxGnu => "aarch64-unknown-linux-gnu",
             ArmLinuxAndroideabi => "arm-linux-androideabi",
             ArmUnknownLinuxGnueabi => "arm-unknown-linux-gnueabi",
+            ArmUnknownLinuxGnueabihf => "arm-unknown-linux-gnueabihf",
             ArmUnknownLinuxMusleabi => "arm-unknown-linux-musleabi",
             Armv7LinuxAndroideabi => "armv7-linux-androideabi",
             Armv7UnknownLinuxGnueabihf => "armv7-unknown-linux-gnueabihf",
@@ -309,6 +312,7 @@ impl Target {
             "aarch64-unknown-linux-gnu" => Aarch64UnknownLinuxGnu,
             "arm-linux-androideabi" => ArmLinuxAndroideabi,
             "arm-unknown-linux-gnueabi" => ArmUnknownLinuxGnueabi,
+            "arm-unknown-linux-gnueabihf" => ArmUnknownLinuxGnueabihf,
             "arm-unknown-linux-musleabi" => ArmUnknownLinuxMusleabi,
             "armv7-linux-androideabi" => Armv7LinuxAndroideabi,
             "armv7-unknown-linux-gnueabihf" => Armv7UnknownLinuxGnueabihf,

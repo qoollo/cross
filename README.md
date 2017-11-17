@@ -193,6 +193,7 @@ worst, "hang" (never terminate).
 | `aarch64-unknown-linux-gnu`          | 2.19   | 4.8.2   | 1.0.2m  | ✓   | 2.8.0 |   ✓    |
 | `arm-linux-androideabi` [5]          | N/A    | 4.9     | 1.0.2m  | ✓   | N/A   |   ✓    |
 | `arm-unknown-linux-gnueabi`          | 2.19   | 4.8.2   | 1.0.2m  | ✓   | 2.8.0 |   ✓    |
+| `arm-unknown-linux-gnueabihf`        | 2.19   | 4.8.2   | 1.0.2m  | ✓   | 2.8.0 |   ✓    |
 | `arm-unknown-linux-musleabi`         | 1.1.15 | 5.3.1   | N/A     |     | 2.8.0 |   ✓    |
 | `armv7-linux-androideabi` [5]        | N/A    | 4.9     | 1.0.2m  | ✓   | N/A   |   ✓    |
 | `armv7-unknown-linux-gnueabihf`      | 2.15   | 4.6.2   | 1.0.2m  | ✓   | 2.8.0 |   ✓    |
